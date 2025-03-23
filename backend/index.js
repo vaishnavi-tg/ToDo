@@ -10,6 +10,8 @@ app.use(express.json())
 app.use(cors())
 app.post("/todo",async function(req,res){
     const createpaylod=req.body
+    console.log(createpaylod);
+    
     const parsepayload=createtodo.safeParse(createpaylod)
     if(!parsepayload.success){
         res.json({
